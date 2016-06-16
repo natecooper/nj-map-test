@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Neighborhood Swap</title>
+
+</head>
+<body>
+	<nav><a href="#" class="active" id="alpine">Alpine</a> | <a href="#" id="glenrock">Glen Rock</a></nav>
+
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48206.410167672446!2d-73.9587185403148!3d40.96175555206398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f218ce08dc33%3A0x9e02c65aa88e3741!2sAlpine%2C+NJ!5e0!3m2!1sen!2sus!4v1466097920255" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		
+			$("nav a").click(function() { swapTown(this.id) } );
+			
+			function swapTown($town) {
+				if ($town == "alpine") {
+					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48206.410167672446!2d-73.9587185403148!3d40.96175555206398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f218ce08dc33%3A0x9e02c65aa88e3741!2sAlpine%2C+NJ!5e0!3m2!1sen!2sus!4v1466097920255");
+					// $(this).toggleClass('active');
+				} else if ( $town == "glenrock" ) {
+					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24103.626841170586!2d-74.14075851231365!3d40.960600669041945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fb586fc6bcc5%3A0x313baba64a17e3d5!2sGlen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1466099713954");
+					
+				}
+
+			}
+
+	</script>
+</body>
+</html>
