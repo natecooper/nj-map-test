@@ -5,7 +5,7 @@
 
 </head>
 <body>
-	<nav><a href="#" class="active" id="alpine">Alpine</a> | <a href="#" id="glenrock">Glen Rock</a></nav>
+	<nav><a href="#" class="active" id="alpine">Alpine</a> | <a href="#" id="glenrock">Glen Rock</a> | <a href="#" id="dumont">Dumont</a></nav>
 
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48206.410167672446!2d-73.9587185403148!3d40.96175555206398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f218ce08dc33%3A0x9e02c65aa88e3741!2sAlpine%2C+NJ!5e0!3m2!1sen!2sus!4v1466097920255" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
@@ -16,7 +16,7 @@
 			$("nav a").click(function() { swapTown(this.id) } );
 			
 			function swapTown($town) {
-				if ($town == "alpine") {
+				if ( $town == "alpine" ) {
 					event.preventDefault();
 					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48206.410167672446!2d-73.9587185403148!3d40.96175555206398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f218ce08dc33%3A0x9e02c65aa88e3741!2sAlpine%2C+NJ!5e0!3m2!1sen!2sus!4v1466097920255");
 					// $(this).toggleClass('active');
@@ -24,8 +24,12 @@
 					event.preventDefault();
 					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24103.626841170586!2d-74.14075851231365!3d40.960600669041945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fb586fc6bcc5%3A0x313baba64a17e3d5!2sGlen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1466099713954");
 					
+				} else if ( $town == "dumont" ) {
+					event.preventDefault();
+					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12054.647140815538!2d-74.0019576220445!3d40.945079117288714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f02463141139%3A0x896f7c64c3dba756!2sDumont%2C+NJ+07628!5e0!3m2!1sen!2sus!4v1466100347475");
+					
 				}
-
+ 
 			}
 
 	</script>
