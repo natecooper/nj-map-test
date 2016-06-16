@@ -2,13 +2,45 @@
 <html>
 <head>
 	<title>Testing Neighborhood Swap</title>
+	<style type="text/css">
 
+		table div {
+			width: 500px;
+		}
+		.glenrock {
+			display: none;
+		}
+		.dumont {
+			display: none;
+		}
+	</style>
 </head>
 <body>
 	<nav><a href="#" class="active" id="alpine">Alpine</a> | <a href="#" id="glenrock">Glen Rock</a> | <a href="#" id="dumont">Dumont</a></nav>
-
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48206.410167672446!2d-73.9587185403148!3d40.96175555206398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f218ce08dc33%3A0x9e02c65aa88e3741!2sAlpine%2C+NJ!5e0!3m2!1sen!2sus!4v1466097920255" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+	<table>
+		<tr>
+			<td>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48206.410167672446!2d-73.9587185403148!3d40.96175555206398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f218ce08dc33%3A0x9e02c65aa88e3741!2sAlpine%2C+NJ!5e0!3m2!1sen!2sus!4v1466097920255" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</td>
+			<td>
+				<div class="alpine">
+					<img src="images/alpine.jpg">
+					<p>Alpine</p>
+					<p>In the small town of Alpine, you will find that you are surrounded by absolutely beautiful residential housing. The homes in this town are nothing short of impressive. You are also within close reach of amenities from neighboring towns for your convenience of necessities, as well as superb schooling systems in Bergen County.</p>
+				</div>
+				<div class="glenrock">
+					<img src="images/glenrock.jpg">
+					<p>Glen Rock</p>
+					<p>Glen Rock is a small, peaceful, communal town where you can find everything your heart desires. With its native land untouched, it is vibrant and thriving; inhabited by families and commuters to NYC, an absolute must to consider!</p>
+				</div>
+				<div class="dumont">
+					<img src="images/dumont.jpg">
+					<p>Dumont</p>
+					<p>Dumont is an ideal town for anyone looking to settle down. Everything can be found within walking distance, including the highest rated schooling systems, unique shops and restaurants.</p>
+				</div>
+			</td>
+		</tr>
+	</table>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 	<script type="text/javascript">
@@ -19,15 +51,18 @@
 				if ( $town == "alpine" ) {
 					event.preventDefault();
 					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48206.410167672446!2d-73.9587185403148!3d40.96175555206398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f218ce08dc33%3A0x9e02c65aa88e3741!2sAlpine%2C+NJ!5e0!3m2!1sen!2sus!4v1466097920255");
-					// $(this).toggleClass('active');
+					$(".glenrock, .dumont").hide();
+					$(".alpine").show();
 				} else if ( $town == "glenrock" ) {
 					event.preventDefault();
 					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24103.626841170586!2d-74.14075851231365!3d40.960600669041945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fb586fc6bcc5%3A0x313baba64a17e3d5!2sGlen+Rock%2C+NJ+07452!5e0!3m2!1sen!2sus!4v1466099713954");
-					
+					$(".alpine, .dumont").hide();
+					$(".glenrock").show();
 				} else if ( $town == "dumont" ) {
 					event.preventDefault();
 					$("iframe").attr('src', "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12054.647140815538!2d-74.0019576220445!3d40.945079117288714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f02463141139%3A0x896f7c64c3dba756!2sDumont%2C+NJ+07628!5e0!3m2!1sen!2sus!4v1466100347475");
-					
+					$(".glenrock, .alpine").hide();
+					$(".dumont").show();
 				}
  
 			}
